@@ -26,6 +26,8 @@ public class Ventas {
     private Long id;
     @Column(name = "fechaVenta")
     private String fechaVenta;
+    @Column(name = "vendedor")
+    private String vendedor;
     /*El caso ideal que hubiese aplicado en un ambito profesional
     es que esta relación sea manytomany con una tabla intermediaria entre Ventas y Productos (un ventas_detalle) para manejar de manera mas lógica
     Lo que es el atributo CANTIDAD de cada producto para cada venta. (Por tiempo no aplicaré esto ahora, espero tener la oportunidad
@@ -46,6 +48,10 @@ public class Ventas {
         return fechaVenta;
     }
 
+    public String getVendedor(){
+        return vendedor;
+    }
+
     public List<Productos> getProductos() {
         return productos;
     }
@@ -60,6 +66,10 @@ public class Ventas {
 
     public void setFechaVenta(String fechaVenta) {
         this.fechaVenta = fechaVenta;
+    }
+
+    public void setVendedor(String vendedor){
+        this.vendedor = vendedor;
     }
 
     public void setProductos(List<Productos> productos) {

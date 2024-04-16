@@ -41,14 +41,19 @@ public class ProductosServiceImpl implements ProductosService{
 
     @Override
     public Productos updateProducto(Long idProducto, Long idVenta, Productos productos) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'updateProducto'");
+        if(productosRepository.existsById(idProducto)){
+            productos.setId(idProducto);
+            Ventas ventaData = ventasRepository.getReferenceById(idVenta);
+            productos.setVenta(ventaData);
+            return productosRepository.save(productos);
+        }else{
+            return null;
+        }
     }
 
     @Override
     public void deleteProductos(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteProductos'");
+        productosRepository.deleteById(id);
     }
     
 }
