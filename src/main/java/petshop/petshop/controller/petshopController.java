@@ -81,46 +81,4 @@ public class petshopController {
     public void deleteProducto(@PathVariable Long id){
         productosService.deleteProductos(id);
     }
-
-    // @PutMapping("/productos/{id}")
-    // public Ventas updateVenta(@PathVariable Long id, @RequestBody Ventas publicacion) {
-    //     return productosService.updateVenta(id, publicacion);
-    // }
-
-    // @DeleteMapping("/productos/{id}")
-    // public void deleteVenta(@PathVariable Long id) {
-    //     productosService.deleteVenta(id);
-    // }
-
-
-    //Todas las ventas por día
-    // @GetMapping("/ventas/porfecha/{dia}")
-    // public List<Ventas> getVentasPorFecha(@PathVariable String dia) {
-    //     //Inicializamos List que tendrá toda las ventas encontradas para la fecha señalada
-    //     List<Ventas> ventasPorFecha = new ArrayList<Ventas>();
-    //     for (Ventas venta : ventas){
-    //         if (venta.getFechaVenta().equals(dia)){
-    //             //Agregamos a la nueva List la venta encontrada
-    //             ventasPorFecha.add(venta);
-    //         }
-    //     }
-    //     return ventasPorFecha;
-    // }
-
-    //Total por día
-    // @GetMapping("/ventas/totalfecha/{dia}")
-    // public int getVentasTotalPorFecha(@PathVariable String dia) {
-    //     int total = 0;
-    //     for (Ventas venta : ventas){
-    //         if (venta.getFechaVenta().equals(dia)){
-    //             List<Productos> productosventa = venta.getProductos();
-    //             //sumamos el total de la venta a la variable totalxfecha
-    //             for (Productos producto : productosventa){
-    //                 total += producto.getPrecio() * producto.getCantidad();
-    //             }
-    //         }
-    //     }
-    //     return total;
-    // }
-
 }
