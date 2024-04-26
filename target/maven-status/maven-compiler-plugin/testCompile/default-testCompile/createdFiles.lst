@@ -1,0 +1,4 @@
+petshop\petshop\controller\petshopControllerTest.class
+petshop\petshop\repository\ProductosRepositoryTest.class
+petshop\petshop\PetshopApplicationTests.class
+petshop\petshop\repository\VentasRepositoryTest.class
